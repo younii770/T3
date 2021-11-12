@@ -1,34 +1,17 @@
 #include <iostream>
-
 using namespace std;
-
-int main()
-{
+int main() {
     int n;
-    cout << "array size:";
+    cout << "enter a number: ";
     cin >> n;
-    int d;
-    int a[n];
-
-
-    for (int i = 0; i < n; i++) {
-        cout << "enter number " << i + 1 << ":";
-        cin >> d;
-        a[i] = d;
+    for (int i = 0; i < n; i+=2) { 
+        cout << "*";
+        if (i != n-1)
+            for (int j = 1; j < 2; j+=2) { 
+                cout << "#";
+            }
+        else
+            break;
     }
-
-    for (int i = 0; i < n; i++) {
-        if (a[i] > a[i + 1]) {
-            cout << "not low to high. number" << i + 1 << " (" << a[i] << ")" << " is bigger than number " << i + 2 << " (" << a[i + 1] << ")" << "\n";
-        }
-    }
-
-
-    for (int i = 0; i < n; i++) {
-        cout << a[i];
-    }
-
-    cout << "\nits low to high.";
-
     return 0;
 }
